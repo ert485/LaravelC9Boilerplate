@@ -19,6 +19,7 @@ laravel new tempLaravel
 rm -rf vendor
 mv tempLaravel/* tempLaravel/.* .
 echo ".c9" >> .gitignore
+echo "build.log.txt" >> .gitignore
 
 # default string length bug fix
 sed -i "N;N;/boot()\\n    {/a\\\t\\tSchema::defaultStringLength(191);" app/Providers/AppServiceProvider.php  
