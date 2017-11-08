@@ -13,7 +13,7 @@ with instructions how to start development in Cloud 9
     ```bash
     cd ~/workspace          
     chmod +x buildc9.sh                             # set executable permission
-    bash -v setup.bash 2>&1 | tee build.log.txt     # run setup script, and keep log
+    bash -v buildc9.sh 2>&1 | tee build.log.txt     # run setup script, and keep log
     ```
 You should now have an empty but working website!<br>
 The script will finish by printing the location of the site.<br>
