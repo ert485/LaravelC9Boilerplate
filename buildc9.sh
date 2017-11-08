@@ -21,8 +21,8 @@ mv tempLaravel/* tempLaravel/.* .
 echo ".c9" >> .gitignore
 
 # default string length bug fix
-#sed -i "N;/boot()\\n    {/a\\\t\\tSchema::defaultStringLength(191);" app/Providers/AppServiceProvider.php
 sed -i "N;N;/boot()\\n    {/a\\\t\\tSchema::defaultStringLength(191);" app/Providers/AppServiceProvider.php  
+sed -i "/use Illuminate\\\Support\\\ServiceProvider;/ause Illuminate\\\Support\\\Facades\\\Schema;" app/Providers/AppServiceProvider.php
 
 # Edit environment file
 sed -i "/DB_DATABASE=/c\DB_DATABASE=c9" ~/workspace/.env
