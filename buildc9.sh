@@ -41,6 +41,6 @@ sudo a2dissite 000*; sudo a2dissite 001*; sudo a2ensite 002*
 echo "<-> Start apache server (in background)"
 run-apache2 &
 echo "echo hosting at http://\$C9_PROJECT-\$C9_USER.c9users.io" > site
-chmod 750 site
+chmod +x site
 # Display site location
 ./site
